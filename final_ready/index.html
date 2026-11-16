@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>David Martínez · Portafolio académico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="futuro.css">
+</head>
+<body>
+<div class="prog" id="prog"></div>
+<div class="wrap">
+<header class="nav">
+  <a class="brand" href="#inicio"><span class="logo">DM</span><span class="mono">PORTAFOLIO ACADÉMICO</span></a>
+  <nav id="menu"><a href="#inicio">Inicio</a><a href="#proyectos">Proyectos</a><a href="#laboratorio">Laboratorio</a><a href="#juego">Juego</a><a href="#skills">Skills</a><a href="#actividades">Actividades</a><a href="#recorrido">Recorrido</a><a href="#sobre-mi">Sobre mí</a><a href="#contacto">Contacto</a></nav>
+  <button class="icon-btn" id="sBtn" type="button" aria-label="Buscar (Ctrl+K)">⌕</button>
+  <button class="icon-btn" id="theme" aria-label="Cambiar tema">☀</button>
+  <button class="icon-btn burger" id="burger" aria-label="Abrir menú">☰</button>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-text">
+    <p class="eyebrow mono">PORTAFOLIO ACADÉMICO · DATOS</p>
+    <h1>Datos con estructura.<br><span class="grad">Ideas con evidencia.</span></h1>
+    <p class="lead">Soy <strong>David Martínez</strong>, estudiante de Ingeniería de Sistemas. Aquí reúno ejercicios de SQL y modelado de datos: el proceso, las decisiones y los archivos para revisar cada trabajo de cerca.</p>
+    <p class="typed mono" aria-live="off">&gt; <span id="typed"></span><i class="caret"></i></p>
+    <div class="actions">
+      <a class="btn primary" href="#actividades">Explorar proyectos <span>→</span></a>
+      <button class="btn ghost" id="cvBtn" type="button">Ver CV en PDF <span>↗</span></button>
+    </div>
+  </div>
+  <figure class="photo">
+    <span class="bracket"></span>
+    <div class="frame">
+      <img id="fotoImg" src="img/foto.jpg" alt="Retrato de David Martínez" onerror="this.hidden=true;document.getElementById('fotoPh').hidden=false">
+      <div class="ph" id="fotoPh" hidden>DM</div>
+      <button class="chg mono" id="fotoBtn" type="button">CAMBIAR FOTO</button>
+      <figcaption><b>David Martínez</b><span class="mono">ESTUDIANTE DE INGENIERÍA DE SISTEMAS</span></figcaption>
+    </div>
+    <span class="side s1 mono">SISTEMAS · DATOS · APRENDIZAJE</span>
+    <span class="side s2 mono">APRENDER · MODELAR · DOCUMENTAR</span>
+  </figure>
+</section>
+
+<section class="stats" aria-label="Cifras del curso">
+  <div><b>4</b><span>unidades<br>del curso</span></div>
+  <div><b>16</b><span>semanas<br>de recorrido</span></div>
+  <div><b>32</b><span>actividades<br>por completar</span></div>
+  <div><b id="stPct">0%</b><span>avance<br>del curso</span></div>
+</section>
+
+<section class="sec" id="proyectos">
+  <div class="sec-head">
+    <div><p class="eyebrow mono">SELECCIÓN DE TRABAJOS</p><h2>Proyectos, con contexto.</h2></div>
+    <p class="note">Cada evidencia abre la semana correspondiente. Revisa los archivos que subiste y el proceso de cada trabajo.</p>
+  </div>
+  <div class="chips" role="group" aria-label="Filtrar proyectos"><button type="button" data-f="todos" aria-pressed="true">Todos</button><button type="button" data-f="sql" aria-pressed="false">SQL</button><button type="button" data-f="modelado" aria-pressed="false">Modelado</button><button type="button" data-f="azure" aria-pressed="false">Azure</button><button type="button" data-f="arquitectura" aria-pressed="false">Arquitectura</button></div>
+  <div class="grid">
+    <article class="card c1" data-tags="sql indexacion">
+      <div class="art"><span class="mono tl">QUEST / 08</span><i class="dot"></i>
+        <div class="tbl t1"><b>alumno</b><i>id · nombre</i><i>programa_id</i></div>
+        <div class="tbl t2"><b>índice</b><i>programa_id</i><i>optimizar ↗</i></div>
+        <div class="tbl t3"><b>programa</b><i>id · nombre</i><i>facultad_id</i></div>
+        <span class="mono bl">RELACIONES EN PRIMER PLANO</span><span class="mono br">SQL_01</span></div>
+      <div class="body"><p class="mono meta"><span>SEMANA 08</span><span>01</span></p>
+        <h3>SQL QUEST</h3><h4>Esquemas e Indexación</h4>
+        <p>Un recorrido por la estructura de una base de datos: organizar esquemas y entender cómo los índices ayudan a consultar con intención.</p>
+        <p class="tags mono"><span>SQL</span><span>Esquemas</span><span>Indexación</span></p>
+        <button class="link mono" data-go="8" type="button">Ver evidencia <em>↗</em></button></div>
+    </article>
+    <article class="card c2" data-tags="azure sql">
+      <div class="body"><p class="mono meta"><span>SEMANA 05</span><span>02</span></p>
+        <h3>Manual Azure SQL</h3><h4>Grados y Títulos</h4>
+        <p>Una guía práctica para trabajar con Azure SQL a través de un caso académico de grados y títulos.</p>
+        <p class="tags mono"><span>Azure SQL</span><span>Manual</span><span>Consultas</span></p>
+        <button class="link mono" data-go="5" type="button">Ver evidencia <em>↗</em></button></div>
+      <div class="art"><span class="mono tl">AZURE SQL / FIELD GUIDE</span>
+        <div class="orb"><div class="orb-in"><b>SQL</b><small class="mono">BASE DE DATOS</small></div></div>
+        <span class="mono tr">05<br>/ 16</span><span class="mono bl">GRADOS<br>Y TÍTULOS</span></div>
+    </article>
+    <article class="card c3" data-tags="arquitectura">
+      <div class="body"><p class="mono meta"><span>SEMANA 06</span><span>03</span></p>
+        <h3>Arquitectura Física</h3><h4>Almacenamiento</h4>
+        <p>Una mirada a cómo se organiza físicamente la información y a las decisiones que conectan el modelo con su almacenamiento.</p>
+        <p class="tags mono"><span>Arquitectura</span><span>Datos</span><span>Almacenamiento</span></p>
+        <button class="link mono" data-go="6" type="button">Ver evidencia <em>↗</em></button></div>
+      <div class="art"><span class="mono tl">PHYSICAL LAYER — 06</span>
+        <div class="layer l1"><em>01</em> Datos <u>.MDF</u></div><div class="layer l2"><em>02</em> Registro <u>.LDF</u></div><div class="layer l3"><em>03</em> Respaldo <u>.BAK</u></div>
+        <span class="mono br">ORGANIZAR TAMBIÉN ES DISEÑAR.</span></div>
+    </article>
+    <article class="card c4" data-tags="modelado">
+      <div class="art"><span class="mono badge">MODELO<br>03–04</span>
+        <p class="mono tag-e">EDITORIAL</p><p class="big">Las relaciones cuentan historias.</p>
+        <p class="mono tag-s">EMPRESA INFORMÁTICA</p><span class="ring"></span><span class="ring r2"></span>
+        <p class="mono foot"><span>ENTIDAD</span><span>VÍNCULO</span><span>DATO</span></p></div>
+      <div class="body"><p class="mono meta"><span>SEMANAS 03–04</span><span>04</span></p>
+        <h3>Cadena Editorial</h3><h4>Empresa Informática</h4>
+        <p>Modelado de una empresa editorial y datos de ejemplo para dar contexto a las relaciones entre sus entidades.</p>
+        <p class="tags mono"><span>Modelado</span><span>Relaciones</span><span>Datos de ejemplo</span></p>
+        <button class="link mono" data-go="3" type="button">Ver evidencia <em>↗</em></button></div>
+    </article>
+  </div>
+</section>
+</div>
+
+<section class="sec" id="laboratorio">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow mono">LABORATORIO</p><h2>Pruébalo tú mismo.</h2></div>
+      <p class="note">Una base de datos real corriendo en tu navegador, con las tablas de mis proyectos. Elige un ejemplo o escribe tu consulta.</p>
+    </div>
+    <div class="lab">
+      <div class="panel">
+        <p class="mono lbl">TABLAS · facultad · programa · alumno</p>
+        <div class="chips" id="sqlChips"></div>
+        <textarea id="sqlIn" class="sqlin mono" rows="5" spellcheck="false" aria-label="Consulta SQL"></textarea>
+        <div class="actions"><button class="btn primary" id="sqlRun" type="button">Ejecutar ▶</button><button class="btn ghost" id="sqlReset" type="button">Reiniciar datos</button><span class="mono hint">Ctrl + Enter</span></div>
+        <div id="sqlOut" class="out" aria-live="polite"><p class="mono hint">El resultado aparecerá aquí.</p></div>
+      </div>
+      <div class="panel" id="quiz"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="juego">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow mono">JUEGO</p><h2>Encesta antes de que acabe el tiempo.</h2></div>
+      <p class="note">Tres dificultades y 8 niveles: aros que se mueven, viento y muros. Supera el objetivo antes de que se acabe el tiempo y gana hasta 3 estrellas.</p>
+    </div>
+    <div class="hud mono"><span>NIVEL <b id="gLvl">—</b></span><span>CANASTAS <b id="gGoal">0/0</b></span><span>TIEMPO <b id="gTime">0</b>s</span><span>PUNTOS <b id="gScore">0</b></span><span>RÉCORD <b id="gBest">0</b></span><button class="mini mono" id="gMenu" type="button">☰ Niveles</button></div>
+    <div class="gwrap"><canvas id="gm" width="640" height="400" aria-label="Juego de baloncesto: arrastra la pelota y suéltala"></canvas>
+      <div class="gover" id="gOver"></div></div>
+  </div>
+</section>
+
+<section class="band" id="actividades">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow mono">ACTIVIDADES</p><h2>Sube tu trabajo, semana a semana.</h2></div>
+      <p class="note">4 unidades, 4 semanas cada una, 2 actividades por semana. Los archivos se guardan en este navegador.</p>
+    </div>
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <div class="weekgrid" id="panel"></div>
+  </div>
+</section>
+
+<section class="sec band2" id="recorrido">
+  <div class="wrap split">
+    <div><p class="eyebrow mono">EL RECORRIDO</p><h2>Aprendizaje que se puede seguir.</h2>
+      <p class="muted">Un registro del curso, no una lista de logros. Las cifras muestran la estructura y el avance general; las entregas muestran el trabajo.</p></div>
+    <div class="course">
+      <p class="mono row"><span>AVANCE DEL CURSO</span><span class="cy" id="pct">0%</span></p>
+      <div class="bar"><i id="bar"></i></div>
+      <div class="trio"><div><b>4</b><span class="mono">UNIDADES<br>DEL CURSO</span></div><div><b id="nDone">0</b><span class="mono">ACTIVIDADES CON<br>ARCHIVOS (DE 32)</span></div><div><b id="nFiles">0</b><span class="mono">ARCHIVOS<br>SUBIDOS</span></div></div>
+      <p class="mono row"><span>MAPA DEL CURSO</span><span>16 SEMANAS</span></p>
+      <div class="weeks" id="weeks" role="group" aria-label="Semanas"></div>
+      <p class="mono hint" id="hint">Toca una semana para abrirla.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="skills">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow mono">PANEL DE HABILIDADES</p><h2>Tecnologías que uso.</h2></div><p class="note">Cada tarjeta muestra dónde se aplica. Los niveles los defines tú en config.js.</p></div>
+    <div class="skills" id="skillGrid"></div>
+  </div>
+</section>
+
+<section class="sec" id="linea">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow mono">LÍNEA DE TIEMPO</p><h2>Evolución académica.</h2></div><p class="note">Se construye con los proyectos y hitos de config.js.</p></div>
+    <ol class="tl" id="tl"></ol>
+  </div>
+</section>
+
+<section class="sec" id="sobre-mi">
+  <div class="wrap split">
+    <div><p class="eyebrow mono">SOBRE MÍ</p><h2>Curiosidad por lo que pasa detrás de los datos.</h2></div>
+    <div class="about">
+      <p>Estudio <strong>Ingeniería de Sistemas</strong> y uso este espacio para documentar mi trabajo académico en bases de datos. Me interesa entender cómo se conectan las piezas: desde el modelo hasta la consulta.</p>
+      <p>Los ejemplos publicados son ejercicios del curso. En cada semana encontrarás la evidencia disponible, con su contexto.</p>
+      <blockquote>Primero entender el modelo. Después, escribir la consulta.</blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contacto">
+  <div class="wrap cta-in">
+    <div><p class="eyebrow mono">CONTACTO</p><h2>¿Quieres revisar el trabajo?</h2><p class="muted">Déjame un mensaje o explora las evidencias publicadas semana a semana.</p>
+      <div class="actions" style="margin-top:1.4rem"><a class="btn ghost" href="#actividades">Ver actividades ↗</a><button class="btn primary editor-only" id="cvUp" type="button">Subir / cambiar CV ↑</button></div></div>
+    <form class="form" id="msgForm">
+      <label>Tu nombre<input name="name" required autocomplete="name"></label>
+      <label>Tu correo<input name="mail" type="email" required autocomplete="email"></label>
+      <label>Mensaje<textarea name="msg" rows="4" required></textarea></label>
+      <button class="btn primary" type="submit">Enviar mensaje ↗</button>
+    </form>
+  </div>
+</section>
+<footer class="wrap"><span class="mono">DAVID MARTÍNEZ · ESTUDIANTE DE INGENIERÍA DE SISTEMAS</span><span><button class="mono edbtn" id="edBtn" type="button">Modo editor</button> <a class="mono cy" href="#inicio">Volver arriba ↑</a></span></footer>
+
+<input type="file" id="cvIn" accept=".pdf,application/pdf" hidden>
+<input type="file" id="fotoIn" accept="image/*" hidden>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="config.js"></script>
+<script src="script.js"></script>
+<script src="futuro.js"></script>
+</body>
+</html>

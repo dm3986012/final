@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Semana 05 · Actividad 1</title>
+  <style>
+    body{margin:0;background:#050b19;color:#edf7ff;font-family:Segoe UI,Arial,sans-serif;padding:32px}
+    .card{max-width:900px;margin:auto;background:#0a1730;border:1px solid #1edcff66;border-radius:24px;padding:34px;box-shadow:0 0 40px #00d9ff12}
+    h1{font-size:34px;margin:0 0 8px}
+    h2{color:#45e5ff}
+    .tag{display:inline-block;padding:7px 12px;border-radius:99px;background:#325eea;color:white}
+    p,li{color:#b9cbe3;line-height:1.8}
+    .box{padding:18px;border-radius:16px;background:#071126;border:1px solid #8a5cff55;margin-top:22px}
+    .document-list{display:grid;gap:16px;margin-top:18px}
+    .doc-card{padding:16px;background:#050f22;border:1px solid #24558f66;border-radius:14px}
+    .doc-card h3{margin:0 0 8px;color:#45e5ff}
+    .doc-card>p{margin:0 0 12px}
+    .pdf-viewer{overflow:hidden;border:1px solid #24558f66;border-radius:12px;background:#fff}
+    .pdf-viewer iframe{display:block;width:100%;height:min(76vh,820px);min-height:520px;border:0;background:#fff}
+    .sql-document{margin-top:10px;background:#050f22;border:1px solid #24558f66;border-radius:12px;overflow:hidden}
+    .sql-document summary{padding:14px 16px;cursor:pointer;color:#45e5ff;font-weight:700}
+    .sql-scroll{max-height:420px;overflow:auto;border-top:1px solid #24558f66}
+    .sql-scroll pre{margin:0;padding:16px;color:#d5e5f8;font:12px/1.55 Consolas,Monaco,monospace;white-space:pre;tab-size:2}
+    .sql-scroll code{font:inherit}
+    .doc-note{color:#ffcf82!important;font-size:13px}
+    @media(max-width:600px){body{padding:14px}.card{padding:20px}.pdf-viewer iframe{height:68vh;min-height:400px}.sql-scroll{max-height:50vh}}
+  </style>
+</head>
+<body>
+<main class="card">
+  <span class="tag">Semana 05 · Actividad 1</span>
+  <h1>Manual Azure SQL · Grados y Títulos</h1>
+  <p><b>Unidad 2 · Desarrollo</b></p>
+  <p>Manual ilustrado paso a paso: del acceso institucional a las tablas relacionadas y la primera consulta desde SSMS.</p>
+
+  <div class="box">
+    <h2>📂 Documentos de la actividad</h2>
+    <p>Lee el manual PDF aquí mismo (visor integrado). El script SQL también se muestra en esta página.</p>
+
+    <div class="document-list">
+      <section class="doc-card">
+        <h3>📕 Manual Azure SQL — Grados y Títulos</h3>
+        <p>PDF · 11 páginas · Base de Datos II · Semana 05</p>
+        <div class="pdf-viewer">
+          <iframe src="Manual_Azure_SQL_Semana05.pdf#toolbar=1&navpanes=0&view=FitH" title="Manual Azure SQL Grados y Títulos" loading="lazy"></iframe>
+        </div>
+      </section>
+
+      <section class="doc-card">
+        <h3>💻 Script SQL</h3>
+        <p>Abre el título para leer el contenido en esta página.</p>
+        <details class="sql-document" open>
+          <summary>Grados_y_Titulos.sql</summary>
+          <div class="sql-scroll">
+            <pre><code data-sql-src="Grados_y_Titulos.sql">Cargando script SQL…</code></pre>
+          </div>
+        </details>
+        <p class="doc-note">⚠️ El script contiene comandos SQL para crear tablas y datos. Solo se muestra aquí: no se ejecuta al abrir la actividad.</p>
+      </section>
+    </div>
+  </div>
+</main>
+
+<script>
+(function(){
+  document.querySelectorAll("[data-sql-src]").forEach(function(code){
+    var fileName = code.getAttribute("data-sql-src");
+    fetch(encodeURIComponent(fileName)).then(function(response){
+      if(!response.ok) throw new Error("No se pudo cargar el archivo SQL");
+      return response.text();
+    }).then(function(text){
+      code.textContent = text;
+    }).catch(function(){
+      code.textContent = "No se pudo mostrar este SQL. Comprueba tu conexión e inténtalo de nuevo.";
+    });
+  });
+})();
+</script>
+</body>
+</html>
