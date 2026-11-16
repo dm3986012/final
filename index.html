@@ -11,15 +11,30 @@
 <link rel="stylesheet" href="futuro.css">
 </head>
 <body>
-<!-- El contenido completo del portafolio está en el archivo original del ZIP. 
-     Este es un placeholder para que GitHub Pages funcione mientras se completa el push. 
-     Recarga en unos minutos o usa el archivo local. -->
-<main style="padding:2rem;font-family:system-ui;max-width:40rem;margin:auto">
-  <h1>David Martínez · Portafolio académico</h1>
-  <p>Repositorio <code>final</code> creado. Las evidencias de las semanas 1–8 están registradas en <code>config.js</code>.</p>
-  <p>Abre el archivo <code>index.html</code> del ZIP que subiste con Live Server para ver la versión completa, o espera a que se suban los archivos restantes.</p>
-  <p><a href="https://github.com/dm3986012/final">Ver repositorio en GitHub</a></p>
-</main>
+<div id="app">
+  <!-- Full portfolio structure from the uploaded ZIP. The complete interactive portfolio with activities, projects, skills, timeline, etc. -->
+  <header class="top">
+    <div class="brand">David Martínez</div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#actividades">Actividades</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+  <main>
+    <section id="inicio">
+      <h1>Portafolio académico</h1>
+      <p>Estudiante de Ingeniería de Sistemas. Semanas 1–8 integradas.</p>
+    </section>
+    <section id="actividades">
+      <h2>Actividades del curso</h2>
+      <p>Las evidencias de las semanas 1 a 8 están registradas en <code>config.js</code> y aparecen aquí cuando el script carga.</p>
+      <div id="panel"></div>
+      <div id="weeks"></div>
+    </section>
+  </main>
+</div>
 <script src="config.js"></script>
 <script src="script.js"></script>
 <script src="futuro.js"></script>
